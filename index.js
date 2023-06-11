@@ -108,25 +108,25 @@ function templatizeString(text, parameters) {
 
 function getStatusText(color) {
   return color == "nodata"
-    ? "No Data Available"
+    ? "정보 없음"
     : color == "success"
-    ? "Fully Operational"
+    ? "정상"
     : color == "failure"
-    ? "Major Outage"
+    ? "주요 장애"
     : color == "partial"
-    ? "Partial Outage"
+    ? "일부 장애"
     : "Unknown";
 }
 
 function getStatusDescriptiveText(color) {
   return color == "nodata"
-    ? "No Data Available: Health check was not performed."
+    ? "해당 날짜에 대하여 기록된 정보가 없습니다."
     : color == "success"
-    ? "No downtime recorded on this day."
+    ? "서비스가 정상 작동하고 있습니다."
     : color == "failure"
-    ? "Major outages recorded on this day."
+    ? "현재 서비스가 중단되었거나 심각한 장애가 발생하고 있습니다."
     : color == "partial"
-    ? "Partial outages recorded on this day."
+    ? "서비스 점검 중이거나 서비스에 장애가 발생하고 있습니다."
     : "Unknown";
 }
 
